@@ -4,69 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "f2cc6c136424b07a",
+        "id": "e640d4730c6b592a",
         "type": "tabs",
         "children": [
           {
-            "id": "b4d5f0bf98bb0055",
+            "id": "65f3a5996beb4e18",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computer_Science/database/0x00-DataBase.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9618b44feb80071e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computer_Science/OS/Intro to Linux.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5f2504e5fb854ef2",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.6.7"
-              }
-            }
-          },
-          {
-            "id": "6cbf3ffaf7935349",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computer_Science/Web/0x00Front-End.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ea1d6c33674b0f4d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Computer_Science/Syntax/Git.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -132,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computer_Science/database/0x00-DataBase.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -149,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Computer_Science/database/0x00-DataBase.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Computer_Science/database/0x00-DataBase.md"
+                "file": "Untitled.md"
               }
             }
           },
@@ -204,15 +151,19 @@
   },
   "active": "b4221203322c013b",
   "lastOpenFiles": [
-    "Computer_Science/Web/JavaScript/Async Vs promises.md",
+    "Untitled.md",
+    "Computer_Science/database/0x00-DataBase.md",
+    "Computer_Science/OS/Intro to Linux.md",
     "Computer_Science/Web/0x00Front-End.md",
+    "Computer_Science/ARM/Architecture/Application Program Status Register (APSR).md",
+    "Computer_Science/ARM/Architecture/Exceptions and interrupts.md",
+    "Computer_Science/Web/JavaScript/Async Vs promises.md",
     "Computer_Science/Web/JavaScript",
     "Computer_Science/Web/CSS.md",
     "Computer_Science/Web/HTML.md",
     "Web.md",
     "Computer_Science/Web",
     "Computer_Science/database/0x01-SQL_Syntax.md",
-    "Computer_Science/database/0x00-DataBase.md",
     "Computer_Science/OOP/0x00-OOP.md",
     "Computer_Science/OOP/0x01-Basic_Concepts.md",
     "Computer_Science/OOP/0x07-Throw Catch.md",
@@ -242,8 +193,6 @@
     "Untitled.canvas",
     "Computer_Science/Assembly",
     "Computer_Science/OOP/0x03-Inheritance",
-    "README.md",
-    "2024-03-13.md",
     "Untitled 1.canvas",
     "Computer_Science/OOP"
   ]
