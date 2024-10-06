@@ -11,8 +11,12 @@
             "id": "65f3a5996beb4e18",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Computer_Science/DSA/Prinecton/Graphs/Graphs.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Computer_Science/DSA/Prinecton/Graphs/Graphs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Computer_Science/DSA/Prinecton/Graphs/Graphs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Untitled.md"
+                "file": "Computer_Science/DSA/Prinecton/Graphs/Graphs.md"
               }
             }
           },
@@ -151,40 +157,40 @@
   },
   "active": "b4221203322c013b",
   "lastOpenFiles": [
+    "Computer_Science/DSA/Prinecton/Graphs/Directed Graphs.md",
+    "Computer_Science/DSA/Prinecton/Graphs/Minimum Spanning Trees.md",
+    "Computer_Science/DSA/Prinecton/Graphs/Graphs.md",
     "Untitled.md",
     "Computer_Science/DSA/Gorkking Book",
     "Computer_Science/DSA/New folder",
-    "Computer_Science/DSA/Notes/Sorting/Elementary Sorts/Selection Sort.md",
-    "Computer_Science/DSA/Notes/Sorting/Elementary Sorts/Shell Sort.md",
-    "Computer_Science/DSA/Notes/Sorting/Elementary Sorts/Insertion Sort.md",
-    "Computer_Science/DSA/Notes/Union-Find/Union-Find.md",
-    "Computer_Science/DSA/Notes/Union-Find/Weighted Quick-Union.md",
-    "Computer_Science/DSA/Notes/Union-Find/Quick-Find.md",
-    "Computer_Science/DSA/Notes/Union-Find/Quick-Union.md",
-    "Computer_Science/DSA/Notes/Union-Find/Dynamic Connectivity.md",
-    "Computer_Science/DSA/Notes/Searching/Symbol Tables.md",
-    "Computer_Science/DSA/Notes/Searching/Searching.md",
-    "Computer_Science/DSA/Notes/Searching/Hash Tables.md",
-    "Computer_Science/DSA/Notes/Searching/Red-black BSTs.md",
-    "Computer_Science/DSA/Notes/Searching/Balanced Search Trees (Balanced BST).md",
-    "Computer_Science/DSA/Notes/Searching/Binary Search Trees (BST).md",
-    "Computer_Science/DSA/Notes/Searching/2-3 Search Trees.md",
-    "Computer_Science/DSA/Notes/Sorting/Sorting.md",
-    "Computer_Science/DSA/Notes/Sorting/Quick Sort.md",
-    "Computer_Science/DSA/Notes/Sorting/Elementary Sorts",
-    "Computer_Science/DSA/Notes/Sorting/Merge Sort.md",
-    "Computer_Science/DSA/Notes/Sorting/Priority Queues.md",
-    "Computer_Science/DSA/Notes/Graphs/Directed Graphs.md",
-    "Computer_Science/DSA/Notes/Graphs/Undirected Graphs.md",
-    "Computer_Science/DSA/Notes/Graphs/Minimum Spanning Trees.md",
-    "Computer_Science/DSA/Notes/Graphs/Graphs.md",
-    "Computer_Science/DSA/Notes/Union-Find",
-    "Computer_Science/DSA/Notes/Bags.md",
-    "Computer_Science/DSA/Notes/Stack.md",
-    "Computer_Science/DSA/Notes/Searching",
-    "Computer_Science/DSA/Notes/Sorting",
-    "Computer_Science/DSA/Notes/Graphs",
-    "Computer_Science/DSA/Notes",
+    "Computer_Science/DSA/Prinecton/Sorting/Elementary Sorts/Selection Sort.md",
+    "Computer_Science/DSA/Prinecton/Sorting/Elementary Sorts/Shell Sort.md",
+    "Computer_Science/DSA/Prinecton/Sorting/Elementary Sorts/Insertion Sort.md",
+    "Computer_Science/DSA/Prinecton/Union-Find/Union-Find.md",
+    "Computer_Science/DSA/Prinecton/Union-Find/Weighted Quick-Union.md",
+    "Computer_Science/DSA/Prinecton/Union-Find/Quick-Find.md",
+    "Computer_Science/DSA/Prinecton/Union-Find/Quick-Union.md",
+    "Computer_Science/DSA/Prinecton/Union-Find/Dynamic Connectivity.md",
+    "Computer_Science/DSA/Prinecton/Searching/Symbol Tables.md",
+    "Computer_Science/DSA/Prinecton/Searching/Searching.md",
+    "Computer_Science/DSA/Prinecton/Searching/Hash Tables.md",
+    "Computer_Science/DSA/Prinecton/Searching/Red-black BSTs.md",
+    "Computer_Science/DSA/Prinecton/Searching/Balanced Search Trees (Balanced BST).md",
+    "Computer_Science/DSA/Prinecton/Searching/Binary Search Trees (BST).md",
+    "Computer_Science/DSA/Prinecton/Searching/2-3 Search Trees.md",
+    "Computer_Science/DSA/Prinecton/Sorting/Sorting.md",
+    "Computer_Science/DSA/Prinecton/Sorting/Quick Sort.md",
+    "Computer_Science/DSA/Prinecton/Sorting/Elementary Sorts",
+    "Computer_Science/DSA/Prinecton/Sorting/Merge Sort.md",
+    "Computer_Science/DSA/Prinecton/Sorting/Priority Queues.md",
+    "Computer_Science/DSA/Prinecton/Graphs/Undirected Graphs.md",
+    "Computer_Science/DSA/Prinecton/Union-Find",
+    "Computer_Science/DSA/Prinecton/Bags.md",
+    "Computer_Science/DSA/Prinecton/Stack.md",
+    "Computer_Science/DSA/Prinecton/Searching",
+    "Computer_Science/DSA/Prinecton/Sorting",
+    "Computer_Science/DSA/Prinecton/Graphs",
+    "Computer_Science/DSA/Prinecton",
     "Computer_Science/DSA/Ezz/Union-Find",
     "Computer_Science/DSA/Ezz/Sorting/Elementary Sorts",
     "Computer_Science/pics/Pasted image 20240327162650.png",
