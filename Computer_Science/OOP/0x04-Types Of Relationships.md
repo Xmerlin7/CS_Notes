@@ -1,132 +1,175 @@
-## <span style="color:#92d050">Association</span>
+## 🧱 Composition vs Aggregation vs Association (in Python Context)
 
-- **Definition**: Association represents a relationship between two or more classes.
-- **Characteristics**:
-    - Can be one-to-one, one-to-many, or many-to-many.
-    - Classes remain independent and can exist without each other.
+في البرمجة كائنية التوجه (OOP)، بنحب نوضح العلاقات بين الكائنات مش بس عن طريق الوراثة (Inheritance)، لكن كمان عن طريق إن كائن يحتفظ بكائن تاني جواه كـ **Attribute**. هنا بنبدأ ندخل في مفاهيم: **Association**، **Aggregation**، و**Composition**.
+
+
+## 🧠 القاعدة الذهبية:
+
+> ✅ استخدم الوراثة لما تكون العلاقة: "A **is** B"  
+> ✅ استخدم composition / association لما تكون العلاقة: "A **has**  B"
+### 🔹 Association
+
+- **التعريف**: Association تعني وجود علاقة بين كائنين أو أكثر (مثل طالب ومعلم).
+    دي أبسط علاقة ممكنة. الكائنات بتكون مستقلة، بس واحد منهم بيحتفظ بتاني كـ Attribute. العلاقة هنا "ارتباط" مش ملكية.
+- **الخصائص**:
+    
+    - العلاقة قد تكون One-to-One أو One-to-Many أو Many-to-Many.
+        
+    - كل كلاس مستقل بذاته ويمكن أن يوجد بدون الآخر.
+        
 - **UML Representation**:
-	- A single teacher has multiple students.
-		 ![[Pasted image 20240318174319.png]]
-		 -  A single student can associate with many teachers.
-		  ![[Pasted image 20240318174350.png]]
-```java
-public class Car {
-    private Engine engine;
+    
+    - معلم لديه طلاب عديدون.  
+        ![[Pasted image 20240318174319.png]]
+        
+    - الطالب قد يكون له عدة معلمين.  
+        ![[Pasted image 20240318174350.png]]
+        
 
-    // Constructor
-    public Car(Engine engine) {
-        this.engine = engine;
-    }
+```python
+class Engine:
+    def start(self):
+        print("Engine started")
 
-    // Other attributes and methods
-}
+class Car:
+    def __init__(self, engine):
+        self.engine = engine  # Association
 
-public class Engine {
-    // Engine class implementation
-}
+    def drive(self):
+        self.engine.start()
+        print("Car is moving")
 
-// Usage example:
-Engine engine = new Engine();
-Car car = new Car(engine);
-
+engine = Engine()
+car = Car(engine)
+car.drive()
 ```
-- **Garbage Collector**: In association, objects referenced by one class may be automatically cleaned up by the garbage collector if there are no other references to them, even if the association is severed.
-## <span style="color:#92d050">Composition</span>
 
-- **Definition**: Composition is a strong form of association where one class (whole) is composed of other classes (parts).
-- **Characteristics**:
-    - Parts are created and destroyed with the whole.
-    - Parts have no meaning or purpose outside the whole.
-- **UML Representation**:![[Pasted image 20240318174634.png]]
-```java
-public class Car {
-    private Engine engine; // Composition relationship
+- الـ `Engine` اتخلق بره `Car`.
+    
+- الـ `Car` بس بيستخدمه، مش مسؤول عن حياته أو موته (يعني لو حذفنا `Car`، الـ `Engine` لسه عايش لو في حد تاني بيشاور عليه).
+    
+- العلاقة دي ممكن تكون (1:1) أو (1:many).
+- **🗑️ Garbage Collector**: لو ما فيش مراجع تانية للكائن `engine`، هيتحذف تلقائيًا.
+    
 
-    // Constructor
-    public Car() {
-        this.engine = new Engine(); // Create engine object along with the car
-    }
+---
 
-    // Other attributes and methods
-}
+### 🔹 Composition
 
-public class Engine {
-    // Engine class implementation
-}
+- **التعريف**: Composition علاقة أقوى من Association — الكلاس الأب يمتلك بالكامل الكائنات التي يتكون منها.
+    
+- **الخصائص**:
+    
+    - الجزء (Part) يتم إنشاؤه داخل الكلاس الأب.
+        
+    - لا يمكن أن يوجد بمفرده خارج الأب.
+        
+- **UML Representation**:  
+    ![[Pasted image 20240318174634.png]]
+    
 
-// Usage example:
-Car car = new Car();
+```python
+class Engine:
+    def start(self):
+        print("Engine started")
 
+class Car:
+    def __init__(self):
+        self.engine = Engine()  # Composition
+
+    def drive(self):
+        self.engine.start()
+        print("Car is moving")
+
+car = Car()
+car.drive()
 ```
-- **Garbage Collector**: In composition, objects that are part of the whole (e.g., engine in a car) are automatically cleaned up by the garbage collector when the whole object is no longer in use.
-## <span style="color:#92d050">Aggregation</span>
 
-- **Definition**: Aggregation is a weak form of association where one class (whole) has a relationship with another class (part).
-- **Characteristics**:
-    - Parts can exist independently of the whole.
-    - Parts may belong to multiple wholes.
-- **UML Representation**:
-	 ![[Pasted image 20240318174625.png]]
-```java
-public class Department {
-    private List<Employee> employees; // Aggregation relationship
+- هنا `Car` هو اللي أنشأ `Engine` بنفسه.
+    
+- مفيش وسيلة إن `Engine` يعيش من غير `Car`.
+    
+- دي علاقة **جزء من كل**. لو حذفنا `Car`، محدش يقدر يستخدم `Engine`.
+- **🗑️ Garbage Collector**: لما كائن `Car` يُحذف، يتم حذف `Engine` تلقائيًا.
+    
 
-    // Constructor
-    public Department() {
-        this.employees = new ArrayList<>(); // Initialize the list of employees
-    }
+---
 
-    // Other attributes and methods
-}
+### 🔹 Aggregation
 
-public class Employee {
-    // Employee class implementation
-}
+- **التعريف**: Aggregation علاقة أضعف من Composition — الكلاس بيحتفظ بمرجع للكائنات لكن لا يملكها بالكامل.
+    
+- **الخصائص**:
+    
+    - الجزء يمكن أن يوجد بشكل مستقل.
+        
+    - نفس الجزء قد ينتمي لأكثر من كائن.
+        
+- **UML Representation**:  
+    ![[Pasted image 20240318174625.png]]
+    
 
-// Usage example:
-Department department = new Department();
+```python
+class Employee:
+    def __init__(self, name):
+        self.name = name
 
+class Department:
+    def __init__(self):
+        self.employees = []  # Aggregation
+
+    def add_employee(self, employee):
+        self.employees.append(employee)
+
+emp1 = Employee("Ali")
+emp2 = Employee("Sara")
+dep = Department()
+dep.add_employee(emp1)
+dep.add_employee(emp2)
 ```
-- **Garbage Collector**: In aggregation, objects that are part of the whole (e.g., employees in a department) are not automatically cleaned up by the garbage collector when the whole object is no longer in use. They may exist independently and be managed separately.
-## **<span style="color:#92d050">Composition Vs Aggregation</span>**
-- The composition and aggregation are two subsets of association. In both of the cases, the object of one class is owned by the object of another class; the only difference is that in composition, the child does not exist independently of its parent, whereas in aggregation, the child is not dependent on its parent i.e., standalone. An aggregation is a special form of association, and composition is the special form of aggregation.
-![[Pasted image 20240318174545.png]]![[Screenshot (58).png]]
-## #Final Key word
-- ### **Final Variables**:
-	- When applied to a variable, the `final` keyword indicates that its value cannot be changed once initialized. For primitive data types, this means the value cannot be reassigned. For reference types (objects), it means the reference cannot be changed after initialization, although the state of the object itself can still be modified.
 
-```java
-final int x = 10; // Once assigned, the value of x cannot be changed.
-final MyClass obj = new MyClass(); // The reference stored in obj cannot be changed.
-```
-- ### **Final Methods**: 
-	- When applied to a method, the `final` keyword indicates that the method cannot be overridden by subclasses. This is often used to prevent modification of critical methods in a class, ensuring their behavior remains consistent across subclasses.
-```java
-class Parent {
-    final void display() {
-        System.out.println("This method cannot be overridden.");
-    }
-}
+- الموظفين مش created داخل `Department`، لكن `Department` بيملكهم كقائمة.
+    
+- لو حذفنا `Department`، الموظفين لسه موجودين لأنهم مستقلين.
+    
+- العلاقة دي مفيدة لما تكون الأجزاء ممكن تتشارك بين أكتر من كيان.
 
-class Child extends Parent {
-    // This will cause a compilation error since display() is final in the Parent class.
-    void display() {
-        System.out.println("This method cannot be overridden.");
-    }
-}
+- **🗑️ Garbage Collector**: حذف `Department` لا يؤدي لحذف `Employee`، لأنهم مستقلين.
+    
 
-```
-- ### **Final Classes**: 
-	- When applied to a class, the `final` keyword indicates that the class cannot be subclassed. This means no other class can inherit from a `final` class.
-```java
-final class FinalClass {
-    // Some code
-}
+---
 
-// This will cause a compilation error since FinalClass is final and cannot be subclassed.
-class SubClass extends FinalClass {
-    // Some code
-}
+### 📌 Composition vs Aggregation vs Association:
 
-```
-![[Pasted image 20240319014557.png]]
+| خاصية          | Association               | Composition       | Aggregation      |
+| -------------- | ------------------------- | ----------------- | ---------------- |
+| من ينشئ الجزء؟ | من الخارج غالبًا          | الكلاس الأب       | من خارج الكلاس   |
+| من يملك الجزء؟ | لا ملكية – فقط ارتباط     | الأب يملك تمامًا  |   مشاركة جزئية   |
+| يعتمد على؟     | العلاقة مرنة وغير ملزمة   | العلاقة قوية جدًا | العلاقة ضعيفة    |
+| عند حذف الأب؟  | لا يتأثر – حسب وجود مراجع | الجزء يُحذف       | الجزء يبقى موجود |
+
+
+
+![[Pasted image 20240318174545.png]]  
+![[Screenshot (58).png]]
+
+---
+
+### 🔒 Garbage Collector في العلاقات:
+
+- **Association**: لو الكائن ملوش مراجع، بيتحذف.
+    
+- **Aggregation**: حذف الكائن الرئيسي لا يؤثر على الأجزاء.
+    
+- **Composition**: حذف الكائن الرئيسي يحذف أجزاؤه تلقائيًا.
+    
+
+---
+
+### ✨ متى تستخدم كل واحدة؟
+
+- **Association** → علاقة مؤقتة أو خفيفة زي مدرس يدرّس لطالب.
+    
+- **Aggregation** → علاقة قوية لكن الجزء ممكن يعيش لوحده، زي إدارة فيها موظفين.
+    
+- **Composition** → الجزء جزء لا يتجزأ من الكل، زي المحرك جوه السيارة.

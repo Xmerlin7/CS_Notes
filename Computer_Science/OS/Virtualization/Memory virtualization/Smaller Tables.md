@@ -35,7 +35,7 @@
 - An even more extreme space savings in the world of page tables is found with **inverted page tables**.
 - Instead of having many page tables (one per process of the system), we keep a single page table that has an entry for each physical page of the system. 
 - The entry tells us which process is using this page, and which virtual page of that process maps to this physical page.
-- Finding the correct entry is now a matter of searching through this data structure. A linear scan would be expensive, and thus a [[Hash Tables|hash table]] is often built over the base structure to speed up lookups.
+- Finding the correct entry is now a matter of searching through this data structure. A linear scan would be expensive, and thus a [[Computer_Science/DSA/Algorithms/Searching/Hash Tables|hash table]] is often built over the base structure to speed up lookups.
 # Sources
 - Operating Systems: Three Easy Pieces - Chapter 20.
 - [Lecture 5 - part 1](https://www.youtube.com/watch?v=ggPkFxOTwHY)
